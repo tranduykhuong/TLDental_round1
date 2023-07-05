@@ -12,7 +12,7 @@ import {
   faMagnifyingGlassPlus,
   faTimes
 } from '@fortawesome/free-solid-svg-icons';
-import ZaloImg from '@/assets/imgs/Contact/Zalo.svg';
+import ZaloImg from '@/assets/imgs/Contact/zalo.svg';
 import Product1 from '@/assets/imgs/Product/Rectangle2061.png';
 import Product2 from '@/assets/imgs/Product/Rectangle2062.png';
 import Product3 from '@/assets/imgs/Product/Rectangle2063.png';
