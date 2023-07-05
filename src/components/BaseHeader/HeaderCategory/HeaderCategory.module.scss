@@ -1,0 +1,81 @@
+@import '@/styles/base';
+
+.header-category {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: auto;
+  list-style: none;
+
+  background-color: #fff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease;
+  box-shadow: 0px 0px 8px -3px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    overflow: visible;
+  }
+
+  &__line {
+    background-color: $primary_900;
+    height: 2px;
+    width: 100%;
+  }
+
+  &-show {
+    display: block;
+  }
+  &--hidden {
+    transition: none;
+  }
+
+  &__item {
+    border-bottom: 1px solid #ddd;
+    position: relative;
+
+    &-link {
+      padding: 10px;
+      font-size: $text-sm;
+      line-height: 1.8rem;
+      font-weight: 400;
+      min-width: 200px;
+      margin-right: 3px;
+      color: $text_600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        padding-right: 6px;
+      }
+
+      &:hover {
+        transform: translateX(3px);
+        margin: 0;
+        transition: all ease-in-out 0.3s;
+      }
+    }
+  }
+
+  &__more {
+
+    &-link {
+      color: $primary_900;
+      display: flex;
+      font-size: $text-xs;
+      justify-content: center;
+      padding: 8px 0;
+
+      &:hover {
+        transform: translateY(-2px);
+        transition: all .2s ease-in-out;
+      }
+    }
+  }
+
+  &-sub {
+    left: 101%;
+    top: -2px;
+  }
+}

@@ -1,0 +1,35 @@
+$res_pc : "only screen and (min-width: 1240px)";
+$res_resolution : "only screen and (min-width: 1024px) and (max-width: 1239px)";
+$res_tablet : "only screen and (min-width: 740px) and (max-width: 1023px)";
+$res_mobile : "only screen and (max-width: 739px)";
+$res_tablet_banner: "only screen and (min-width: 740px) and (max-width: 1300px)"; 
+
+@mixin responsive_pc() {
+  @media #{$res_pc} {
+    @content;
+  }
+}
+
+@mixin responsize_resolution() {
+  @media #{$res_resolution} {
+    @content;
+  }
+}
+
+@mixin responsive_tablet() {
+  @media #{$res_tablet} {
+    @content;
+  }
+}
+
+@mixin responsive_tablet__banner() {
+  @media #{$res_tablet_banner} {
+    @content;
+  }
+}
+
+@mixin responsive_mobile() {
+  @media #{$res_mobile} {
+    @content;
+  }
+}

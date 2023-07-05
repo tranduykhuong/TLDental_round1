@@ -1,0 +1,142 @@
+@import '@/styles/base';
+@import '@/styles/responsive';
+
+.container {
+  margin-top: 3rem;
+  &__bg {
+    img {
+      height: auto;
+      width: 100vw;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    margin: 5rem;
+
+    &-nav {
+      position: sticky;
+      position: -webkit-sticky;
+      width: 50%;
+      margin-right: 4rem;
+
+      ul {
+        list-style: none;
+      }
+
+      &-item {
+        padding: 1rem 0rem 1rem 3rem;
+        border-bottom: 0.1rem solid $text_600;
+        border-left: 0.1rem solid $text_600;
+        border-right: 0.1rem solid $text_600;
+        font-size: $text-base;
+        color: black;
+        font-weight: 410;
+
+        &-active {
+          //   border: 0.199rem solid $primary_900;
+          //   border-left: 0.5rem solid $primary_900;
+          background-color: $color_primary;
+          color: white;
+        }
+
+        &-active {
+          cursor: pointer;
+        }
+      }
+
+      &-item:hover {
+        cursor: pointer;
+        background-color: $color_primary;
+        // border: 0.199rem solid $primary_900;
+        // padding: 1rem 0rem 1rem 3rem;
+        // font-size: $text-base;
+        color: white;
+        font-weight: 410;
+      }
+
+      &-title {
+        border: 0.1rem solid $text_600;
+        padding: 1rem 0rem 1rem 2rem;
+
+        h3 {
+          text-transform: uppercase;
+          font-size: $text-2xl;
+          padding-right: 0.5rem;
+        }
+      }
+    }
+
+    &-section {
+      &-title {
+        font-size: $text-3xl;
+        font-weight: 500;
+        margin-bottom: 3rem;
+      }
+
+      &-details {
+        line-height: 1.5;
+      }
+    }
+  }
+}
+@include responsive_mobile() {
+  .container {
+    &__content {
+      display: block;
+      margin: 0;
+
+      &-nav {
+        width: 100%;
+        margin-bottom: 2rem;
+
+        ul {
+          .hidden {
+            transition: opacity 1s ease-out;
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+          }
+
+          .active {
+            opacity: 1;
+            height: auto;
+          }
+        }
+
+        &-item {
+          font-size: $text-xl-mobile;
+          // border: 0;
+        }
+
+        &-title {
+          width: 100%;
+          display: flex;
+          border: 0;
+          background-color: $text_200;
+
+          svg {
+            transition: transform 1s;
+            width: 3rem;
+            height: auto;
+          }
+
+          &-active svg {
+            transform: rotate(90deg);
+          }
+
+          h3 {
+            margin-left: 1rem;
+            font-size: $text-3xl-mobile;
+            font-weight: 400;
+          }
+        }
+      }
+
+      &-section {
+        margin: 1rem;
+      }
+    }
+  }
+}
