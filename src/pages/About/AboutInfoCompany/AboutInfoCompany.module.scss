@@ -1,0 +1,96 @@
+@import "@/styles/base";
+@import '@/styles/responsive';
+
+
+.about__infocompany{
+    padding: 6rem 12rem 6rem 12rem;
+    background-color:#F4F8FF;
+
+
+    &-title{
+        font-size: $text-4xl;
+        font-weight: 500;
+        line-height: 3.5rem;
+        color: $primary_900;
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+
+    &-content{
+
+        div{
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            gap: 3rem;
+
+            div{
+                width: 50%;
+                
+                img{
+                    width: 100%;
+                }
+            }
+
+            p{  
+                width: 50%;
+                font-size: $text-base;
+                line-height: 3.5rem;
+                color: #000000;
+            }
+        }
+    }
+}
+
+@include responsive_mobile() {
+    .about__infocompany{
+        padding: 2rem 3rem 1rem 3rem;
+        background-color:#F4F8FF;
+    
+    
+        &-title{
+            font-size: $text-lg-mobile;
+            font-weight: 500;
+            line-height: 3.5rem;
+            color: $primary_900;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    
+        &-content{
+    
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                img{
+                    width: 90%;
+                }
+    
+                p{  
+                    width: 100%;
+                    font-size: $text-xs-mobile;
+                    line-height: 2rem;
+                    color: #000000;
+                }
+            }
+            div:first-child{
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+    
+                img{
+                    width: 90%;
+                }
+    
+                p{  
+                    width: 100%;
+                    font-size: $text-xs-mobile;
+                    line-height: 2rem;
+                    color: #000000;
+                }
+            }
+        }
+    }
+}

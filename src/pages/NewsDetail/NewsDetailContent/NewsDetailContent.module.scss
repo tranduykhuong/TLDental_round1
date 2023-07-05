@@ -1,0 +1,265 @@
+@import "@/styles/base";
+@import "@/styles/responsive";
+
+.newsdetail__content{
+    width: 75%;
+    padding-right: 2rem;
+
+    h1{
+        font-size: $text-4xl;
+        color: $primary_900;
+    }
+
+    &-time{
+        display: flex;
+        align-items: center;
+        margin: 2rem 0;
+
+        p{
+            font-size: $text-xl;
+            margin-left: 2rem;
+            font-weight: 300;
+        }
+
+    }
+
+    &-main{
+
+        &-header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 4rem;
+
+            p{
+                font-size: $text-xl;
+                line-height: 3rem;
+                margin-bottom: 3rem;
+            }
+        }
+
+        &-body{
+            margin-bottom: 4rem;
+
+            h3{
+                font-size: $text-2xl;
+                line-height: 3rem;
+                margin-bottom: 2rem;
+                color: $primary_900; 
+            }
+
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                p{
+                    font-size: $text-base;
+                    line-height: 2.4rem;
+                    margin-bottom: 1rem;
+                    
+                }
+                
+                img{
+                }
+            }
+        }
+
+        &-footer{
+            display: flex;
+            justify-content: space-between;
+
+            &-button-left{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                outline: none;
+                border: 2px solid $primary_900;
+                border-radius: 5px;
+                background: #fff;
+                padding: 1rem;
+                max-width: 50rem;
+
+                p{
+                    text-align: start;
+                    font-size: $text-sm;
+                    line-height: 2rem;
+                    color: $primary_900;
+                }
+    
+                &-ic{
+                    margin-right: 2rem;
+                    color: $primary_900;
+                }
+            }
+
+            &-button-right{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                outline: none;
+                border: 2px solid $primary_900;
+                border-radius: 5px;
+                background: #fff;
+                padding: 1rem 1.4rem;
+                max-width: 50rem;
+
+                p{
+                    text-align: start;
+                    font-size: $text-sm;
+                    line-height: 2rem;
+                    text-align: right;
+                    color: $primary_900;
+                }
+    
+                &-ic{
+                    margin-left: 2rem;
+                    color: $primary_900;
+                }
+            }
+
+            
+        }
+    }
+}
+
+@include responsive_mobile() {
+    .newsdetail__content{
+        width: 100%;
+        padding-right: 0;
+    
+        h1{
+            font-size: $text-2xl-mobile;
+            color: $primary_900;
+        }
+    
+        &-time{
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+    
+            img{
+                width: 2rem;
+                height: 2rem;
+            }
+            
+            p{
+                font-size: $text-lg-mobile;
+                margin-left: 1.4rem;
+                font-weight: 300;
+            }
+    
+        }
+    
+        &-main{
+    
+            &-header{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 2rem;
+    
+                p{
+                    font-size: $text-lg-mobile;
+                    line-height: 3rem;
+                    margin-bottom: 1rem;
+                }
+
+                img{
+                    width: 100%;
+                    height: 30rem;
+                }
+            }
+    
+            &-body{
+                margin-bottom: 2rem;
+    
+                h3{
+                    font-size: $text-lg-mobile;
+                    line-height: 3rem;
+                    margin-bottom: 0.3rem;
+                    color: $primary_900; 
+                }
+    
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+    
+                    p{
+                        font-size: $text-base-mobile;
+                        line-height: 2.4rem;
+                        margin-bottom: 1rem;
+                        
+                    }
+                    
+                    img{
+                        width: 100%;
+                        height: 30rem;
+                    }
+                }
+            }
+    
+            &-footer{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-bottom: 1rem;
+    
+                &-button-left{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    outline: none;
+                    border: 2px solid $primary_900;
+                    border-radius: 5px;
+                    background: #fff;
+                    padding: 1rem;
+                    max-width: 50rem;
+                    margin-bottom: 1rem;
+    
+                    p{
+                        text-align: start;
+                        font-size: $text-sm-mobile;
+                        line-height: 2rem;
+                        color: $primary_900;
+                    }
+        
+                    &-ic{
+                        margin-right: 2rem;
+                        color: $primary_900;
+                    }
+                }
+    
+                &-button-right{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    outline: none;
+                    border: 2px solid $primary_900;
+                    border-radius: 5px;
+                    background: #fff;
+                    padding: 1rem 1.4rem;
+                    max-width: 50rem;
+    
+                    p{
+                        text-align: start;
+                        font-size: $text-sm-mobile;
+                        line-height: 2rem;
+                        text-align: right;
+                        color: $primary_900;
+                    }
+        
+                    &-ic{
+                        margin-left: 2rem;
+                        color: $primary_900;
+                    }
+                }
+    
+                
+            }
+        }
+    }
+}

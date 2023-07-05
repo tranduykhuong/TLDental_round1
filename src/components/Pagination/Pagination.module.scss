@@ -1,0 +1,73 @@
+@import 'element-plus/theme-chalk/src/mixins/config.scss';
+@import '@/styles/base';
+@import '@/styles/responsive';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+
+$--el-pagination-button-width: 40px;
+$--el-pagination-button-height: 40px;
+$--el-text-color-primary: #ff0000;
+.pagination {
+  width: 100%;
+  height: 5rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.el-pagination {
+  --el-pagination-button-width: 40px !important;
+  --el-pagination-button-height: 40px !important;
+  --el-pagination-font-size: 16px !important;
+}
+
+.demo-pagination-block + .demo-pagination-block {
+  padding-top: 10px;
+}
+.demo-pagination-block .demonstration {
+  padding-bottom: 16px;
+}
+
+.custom-pagination .el-pagination {
+  font-size: 40px;
+}
+
+.custom-pagination .el-pagination__sizes {
+  font-size: 40px;
+}
+
+.custom-pagination .el-pagination__total {
+  font-size: 40px;
+}
+
+.custom-pagination .el-pagination__jump {
+  font-size: 40px;
+}
+
+@include responsive_mobile() {
+  $--el-pagination-button-width: 40px;
+  $--el-pagination-button-height: 40px;
+  $--el-text-color-primary: #ff0000;
+  .pagination {
+    width: 100%;
+    height: 5rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .el-pagination {
+    --el-pagination-button-width: 30px !important;
+    --el-pagination-button-height: 30px !important;
+    --el-pagination-font-size: 12px !important;
+  }
+
+  .demo-pagination-block + .demo-pagination-block {
+    padding-top: 10px;
+  }
+  .demo-pagination-block .demonstration {
+    padding-bottom: 16px;
+  }
+}

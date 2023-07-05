@@ -4,4 +4,160 @@
 .footer {
   color: $color_highlight;
   background-color: #fff;
+  margin-top: 140px;
+
+  &__info {
+    position: relative;
+    background-color: $color_background_footer;
+    display: flex;
+    justify-content: space-around;
+    padding: 140px 60px 30px;
+
+    &-contact {
+      width: 70%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -60px;
+      display: flex;
+      padding: 40px;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 20px;
+      background: linear-gradient(90deg, $primary_700 0%, $primary_200 100%);
+
+      &--item {
+        color: white;
+
+        p {
+          font-size: $text-lg;
+          font-weight: 600;
+        }
+
+        ul {
+          padding-top: 10px;
+          display: flex;
+          list-style: none;
+
+          li {
+            padding-right: 14px;
+          }
+        }
+
+        a {
+          padding: 10px 20px;
+          background-color: white;
+          border-radius: 20px;
+          border: none;
+
+          &:hover {
+            background-color: $primary_600;
+            color: white;
+            transition: all .2s linear;
+          }
+        }
+      }
+    }
+
+    &-item {
+      color: white;
+      flex: 2;
+      padding: 0 6px;
+
+      &:first-child,
+      &:last-child {
+        flex: 3;
+
+        &--title {
+          padding-bottom: 20px;
+        }
+      }
+
+      p {
+        margin-bottom: 16px;
+        font-weight: 600;
+        font-size: $text-lg;
+      }
+
+      &--title {
+        margin-bottom: 16px;
+      }
+
+      &--list {
+        list-style: none;
+
+        li {
+          padding: 4px 0;
+
+          p {
+            color: white;
+            font-size: $text-sm;
+            font-weight: 300;
+            display: inline;
+            padding-left: 6px;
+          }
+
+          a {
+            color: white;
+            font-size: $text-sm;
+            font-weight: 300;
+          }
+
+          &:hover {
+            transform: translateX(4px);
+            transition: all .3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+
+  &__license {
+    background-color: $color_background_footer;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    font-weight: 300;
+    font-size: $text-sm;
+    text-align: center;
+    border-top: 1px solid white;
+  }
+}
+
+
+// RESPONSIVE
+@include responsive_mobile {
+  .footer {
+
+    &__info {
+      display: block;
+      text-align: center;
+
+      &-item {
+        margin-top: 30px;
+      }
+
+      &-contact {
+        display: block;
+        width: 90%;
+        padding: 20px;
+
+        &--item {
+
+          ul {
+            justify-content: space-between;
+
+            li {
+              padding: 0;
+            }
+          }
+
+          a {
+            display: inline-block;
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+  }
 }

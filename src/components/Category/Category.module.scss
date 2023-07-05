@@ -1,0 +1,98 @@
+@import '@/styles/base';
+
+.category {
+  flex: 1;
+  box-sizing: border-box;
+  margin-top: 3rem;
+  margin-left: 3rem;
+  height: max-content;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10rem;
+  left: 0;
+  align-self: flex-start;
+
+  &__title {
+    display: flex;
+    min-width: 21rem;
+    height: 5.6rem;
+    font-style: normal;
+    font-weight: 700;
+    padding-top: 1rem;
+    padding-left: 3rem;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    margin: auto 0;
+    margin-right: 2rem;
+    padding-right: 2rem;
+    // align-items: center;
+    // padding-bottom: 1rem;
+  }
+
+  &__firstX {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $text_900;
+    margin: auto 0;
+    margin-right: 2rem;
+    border-bottom: 1px solid $text_100;
+    // padding: 1rem 2rem 1.5rem 3rem;
+
+    &--choose {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 1.5rem 2rem 1.5rem 3rem;
+    }
+
+    &--active {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      color: $color_primary; /* Thay đổi màu chữ theo ý muốn */
+    }
+
+    &--animation {
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    @keyframes ani {
+      from {
+        max-height: 0;
+      }
+      to {
+        max-height: 1000px;
+      }
+    }
+
+    &--show-animation {
+      animation: ani 1s ease-out forwards;
+    }
+  }
+
+  &__second {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin-right: 2rem;
+    padding-top: 1rem;
+    padding-left: 5rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    color: #000000;
+    cursor: pointer;
+
+    &--selected {
+      color: #404dc2;
+    }
+  }
+}
