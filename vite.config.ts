@@ -11,12 +11,5 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@use "src/components/Pagination/Pagination.module.scss" as *;`
-      }
-    }
   }
 });
