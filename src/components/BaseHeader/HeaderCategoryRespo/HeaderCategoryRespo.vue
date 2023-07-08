@@ -47,7 +47,7 @@ const subActive = ref('none');
             :key="subItem.slug"
             :class="$style['hder-category__item']"
           >
-            <router-link to="" :class="$style['hder-category__item-link']" @click="hiddenNav">
+            <router-link to="/sanpham" :class="$style['hder-category__item-link']" @click="hiddenNav">
               <p>{{ subItem.name }}</p>
             </router-link>
           </li>
