@@ -155,7 +155,7 @@ const handleSocialForm = (e: Event) => {
             :class="$style['contact__form-button-line']"
             :style="{
               width: widthLine / 1.5 - (isSocial ? 2 : 0) + 'px',
-              transform: 'translateX(' + (!isSocial ? '190%' : '-50%') + ')'
+              transform: 'translateX(' + (!isSocial ? '160%' : '-50%') + ')'
             }"
           ></div>
         </span>

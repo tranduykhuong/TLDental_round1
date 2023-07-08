@@ -248,9 +248,6 @@ onMounted(() => {
   //Find width slider
   widthItemMB.value = window.innerWidth;
 
-  //Auto scroll
-  const container = document.getElementById('list_item');
-
   const startScroll = () => {
     setInterval(() => {
       scrollRight();
@@ -267,22 +264,21 @@ onMounted(() => {
       lineWidth.value = lineActive.offsetWidth;
     }
 
-    if (container) {
-      container.scrollTo({ left: 0, behavior: 'smooth' });
-    }
-
     if (window.innerWidth < 739) {
       mobilestatus.value = true;
       widthItemMB.value = window.innerWidth;
-      tranfX.value = 0;
     }
   };
 
-  window.addEventListener('resize', resizeListener);
+  if (window.innerWidth < 739) {
+    window.addEventListener('resize', resizeListener);
+  }
 });
 
 onUnmounted(() => {
-  window.removeEventListener('resize', resizeListener);
+  if (window.innerWidth < 739) {
+    window.removeEventListener('resize', resizeListener);
+  }
 });
 </script>
 

@@ -94,7 +94,6 @@
             // flex-wrap: nowrap;
             justify-content: space-between;
             cursor: pointer;
-            overflow-x: scroll;
     
             .about__policy-items{
                 display: flex;
@@ -118,14 +117,14 @@
     
                 .about__policy-items-title{
                     font-weight: 700;
-                    font-size: 1.3rem;
+                    font-size: $text-base-mobile;
                     line-height: 1.5rem;
                     margin: 2rem 0 1.4rem;
                 }
     
                 .about__policy-items-content{
                     font-weight: 500;
-                    font-size: 1rem;
+                    font-size: $text-sm-mobile;
                     line-height: 2rem;
                     text-align: center;
                     margin-bottom: 0;

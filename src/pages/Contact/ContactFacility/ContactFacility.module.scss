@@ -137,22 +137,22 @@
                 div{
                     display: flex;
                     align-items: center;
-                    margin-bottom: 0.5rem;
+                    margin-bottom: 0.8rem;
                     
                     .contact__facility-ic{
-                        width: 1.5rem;
-                        height: 1.5rem;
+                        width: 1.8rem;
+                        height: 1.8rem;
                     }
     
                     a{
-                        font-size: $text-xs-mobile;
+                        font-size: $text-base-mobile;
                         line-height: 1.8rem;
                         color: $primary_700;
                         text-decoration: underline;
                     }
     
                     p{
-                        font-size: $text-xs-mobile;
+                        font-size: $text-base-mobile;
                         line-height: 1.8rem;
                         color: #000;
                     }
@@ -163,16 +163,15 @@
                     border: 1px solid #4E7ECD;
     
                     a{
-                        padding: 0.4rem 0.8rem;
+                        padding: 0.8rem 1.4rem;
 
                         .contact__facility-button-ic{
                             margin-right: 0.8rem;
-                            width: 2rem;
-                            height: 2rem;
+                            font-size: $text-lg-mobile;
                         }
         
                         p{
-                            font-size: $text-xs-mobile;
+                            font-size: $text-base-mobile;
                             line-height: 1.8rem;
                         }
                     }

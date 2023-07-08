@@ -376,6 +376,12 @@
             color: #fc5151;
           }
         }
+
+        .card__header--genuine, .card__header--insurance, .card__header--support{
+          p{
+            font-size: 0.4rem !important;
+          }
+        }
       }
 
       &--wgenuine {
@@ -481,7 +487,7 @@
         height: max-content;
 
         &-company {
-          width: max-content;
+          width: auto;
           height: 2rem;
         }
         &-price {

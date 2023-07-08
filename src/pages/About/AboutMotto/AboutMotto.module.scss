@@ -178,13 +178,14 @@
     
                     &-title{
                         font-weight: 700;
-                        font-size: $text-sm-mobile;
+                        font-size: $text-base-mobile;
                     }
     
                     &-content{
-                        min-height: 3rem;
+                        min-height: 0;
                         font-weight: 700;
-                        font-size: $text-xs-mobile;
+                        font-size: $text-sm-mobile;
+                        line-height: 2.4rem;
                         color: #76768F;
                     }
                 }

@@ -8,7 +8,7 @@ import AboutPolicy from './AboutPolicy/AboutPolicy.vue';
 import AboutFacility from './AboutFacility/AboutFacility.vue';
 import BreadCrumb from '@/components/BreadCrumb/BreadCrumb.vue';
 
-const pathAbout = 'lienhe';
+const pathAbout = 'gioithieu';
 </script>
 <template>
   <div :class="$style.about">

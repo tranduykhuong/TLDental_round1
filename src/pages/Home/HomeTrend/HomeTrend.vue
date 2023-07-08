@@ -157,11 +157,15 @@ onMounted(() => {
     }
   };
 
-  window.addEventListener('resize', resizeListener);
+  if (window.innerWidth >= 739) {
+    window.addEventListener('resize', resizeListener);
+  }
 });
 
 onUnmounted(() => {
-  window.removeEventListener('resize', resizeListener);
+  if (window.innerWidth >= 739) {
+    window.removeEventListener('resize', resizeListener);
+  }
 });
 </script>
 <template>

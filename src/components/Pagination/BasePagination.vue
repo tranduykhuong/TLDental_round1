@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import ElPagination from 'element-plus'; // Import the specific component from element-plus
+import { ElPagination } from 'element-plus/lib/components/index.js';
 import 'element-plus/dist/index.css';
 
 const props = defineProps({
@@ -32,7 +32,7 @@ const handleCurrentChange = (val: number) => {
   <div :class="$style['pagination']">
     <el-config-provider namespace="ep">
       <div class="demo-pagination-block">
-        <!-- <el-pagination
+        <el-pagination
           :value="currentPage"
           @input="currentPageRef = $event"
           :page-size="pageSize"
@@ -43,11 +43,11 @@ const handleCurrentChange = (val: number) => {
           layout="prev, pager, next, jumper"
           :total="39"
           :class="$style['custom-pagination']"
-        /> -->
+        />
       </div>
     </el-config-provider>
   </div>
 </template>
 <style scoped module lang="scss">
-@import '../Pagination/Pagination.module.scss';
+// @import '../Pagination/Pagination.module.scss';
 </style>

@@ -53,16 +53,23 @@
 
         .home__reason-item {
           display: flex;
+          align-items: center;
           margin-bottom: 40px;
 
           .home__reason-icon {
             flex: 1;
             display: flex;
+            width: 66px;
+            height: 68px;
             align-items: center;
             justify-content: center;
+            position: relative;
+            border-radius: 50%;
+            background-color: #0088cc;
 
             img {
-              width: 95%;
+              width: 30px;
+              height: 30px;
             }
           }
 

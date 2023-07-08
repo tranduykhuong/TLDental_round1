@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faHome, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import router from '@/router/index';
 
 const pathAD = defineProps({
   tags: {
@@ -77,14 +78,34 @@ const breadcrumbItems = pathSegments.map((segment) => {
   const predefinedItem = predefinedItems.find((item) => item.slug === segment);
   return predefinedItem ? predefinedItem.name : segment;
 });
+
+const returnHome = () => {
+  router.push('/');
+};
+
+const navigate = (slug: string) => {
+  const currentIndex = breadcrumbItems.findIndex((item) => item === slug);
+  if (currentIndex > -1) {
+    const pathSegments = breadcrumbItems.slice(0, currentIndex + 1);
+    const path = `/${pathSegments
+      .map((segment) => predefinedItems.find((item) => item.name === segment)?.slug)
+      .join('/')}`;
+    router.push(path);
+  }
+};
 </script>
 <template>
   <div :class="$style.news__breadcrum">
-    <div :class="$style['news__breadcrum-home']">
+    <div :class="$style['news__breadcrum-home']" @click="returnHome">
       <font-awesome-icon :icon="faHome" :class="$style['news__breadcrum-ic']" />
       <span>Home</span>
     </div>
-    <div :class="$style['news__breadcrum-tag']" v-for="item in breadcrumbItems" :key="item">
+    <div
+      :class="$style['news__breadcrum-tag']"
+      v-for="item in breadcrumbItems"
+      :key="item"
+      @click="navigate(item)"
+    >
       <font-awesome-icon :icon="faChevronRight" :class="$style['news__breadcrum-ic']" />
       <span>{{ item }}</span>
     </div>

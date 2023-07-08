@@ -63,15 +63,20 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                gap: 0;
     
-                img{
-                    width: 90%;
+                div{
+                    width: 100%;
+                    
+                    img{
+                        width: 90%;
+                    }
                 }
     
                 p{  
                     width: 100%;
-                    font-size: $text-xs-mobile;
-                    line-height: 2rem;
+                    font-size: $text-base-mobile;
+                    line-height: 2.6rem;
                     color: #000000;
                 }
             }
@@ -80,14 +85,10 @@
                 flex-direction: column-reverse;
                 align-items: center;
     
-                img{
-                    width: 90%;
-                }
-    
                 p{  
                     width: 100%;
-                    font-size: $text-xs-mobile;
-                    line-height: 2rem;
+                    font-size: $text-base-mobile;
+                    line-height: 2.6rem;
                     color: #000000;
                 }
             }

@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import Comp from '@/assets/imgs/Home/ABComp.png';
-import Icon1 from '@/assets/imgs/Home/RSIcon1.png';
-import Icon2 from '@/assets/imgs/Home/RSIcon2.png';
-import Icon3 from '@/assets/imgs/Home/RSIcon3.png';
 import Meeting from '@/assets/imgs/Home/Meeting.png';
 import CEO from '@/assets/imgs/Home/CEO.png';
 import Logo from '@/assets/imgs/logo_nobg.png';
+import SVG from '@/assets/icons/HomeReason/white_check.png';
 </script>
 <template>
   <div :class="$style.home__reason">
@@ -18,7 +16,7 @@ import Logo from '@/assets/imgs/logo_nobg.png';
       <div :class="$style['home__reason-list']">
         <div :class="$style['home__reason-item']">
           <div :class="$style['home__reason-icon']">
-            <img :src="Icon1" alt="icon1" />
+            <img :src="SVG" alt="icon1" />
           </div>
           <div :class="$style['home__reason-description']">
             <h5>Sản phẩm chính hãng</h5>
@@ -30,7 +28,7 @@ import Logo from '@/assets/imgs/logo_nobg.png';
         </div>
         <div :class="$style['home__reason-item']">
           <div :class="$style['home__reason-icon']">
-            <img :src="Icon2" alt="icon2" />
+            <img :src="SVG" alt="icon2" />
           </div>
           <div :class="$style['home__reason-description']">
             <h5>Mức giá cạnh tranh</h5>
@@ -42,7 +40,7 @@ import Logo from '@/assets/imgs/logo_nobg.png';
         </div>
         <div :class="$style['home__reason-item']">
           <div :class="$style['home__reason-icon']">
-            <img :src="Icon3" alt="icon3" />
+            <img :src="SVG" alt="icon3" />
           </div>
           <div :class="$style['home__reason-description']">
             <h5>Chân thành, tin cậy và uy tín</h5>
