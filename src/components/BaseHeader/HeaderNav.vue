@@ -21,27 +21,10 @@ const hiddenNav = () => {
   // hidden nav on mobile
   flagMobile.value = false;
 };
-
-const getLocation = () => {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        alert(position.coords.latitude);
-        // setLongitude(position.coords.longitude);
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-  } else {
-    console.error('Geolocation is not supported by this browser.');
-  }
-};
 </script>
 <template>
   <div :class="$style.header__nav">
-    <!-- <div :class="$style['header__nav-logo']" @click="() => router.push('/trangchu')"> -->
-    <div :class="$style['header__nav-logo']" @click="getLocation">
+    <div :class="$style['header__nav-logo']" @click="() => router.push('/trangchu')">
       <img :src="logo" alt="logo" width="50" height="50" />
       <div>
         <h4>TL Dental Group</h4>
